@@ -1,0 +1,17 @@
+<div class="img__wrapper">
+  <img src="{{ module.image.src }}" alt="{{ module.image.alt }}" width="{{ module.image_width }}" />
+</div>
+
+<p>
+  {{ module.profile_name }}
+</p>
+
+{% require_css %}
+  <style>
+    img {
+    border-width:{{ module.border_width }}px;
+    border-color:rgba({{ module.border_color.color|convert_rgb}},{{ module.border_color.opacity/100 }});
+    border-style: solid;
+    }
+  </style>
+{% end_require_css %}
